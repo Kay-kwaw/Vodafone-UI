@@ -213,7 +213,7 @@ class _HomePageState extends State<Homepage> {
                                   Align(
                                     alignment: Alignment.topLeft,
                                     child: Icon(Icons.sim_card, color: Colors.red, size: 22,)),
-                                    SizedBox(height: 23,),
+                                    SizedBox(height: 30,),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(0,0,20,0),
                                       child: Text("Your airtime balance", style: TextStyle(
@@ -225,15 +225,27 @@ class _HomePageState extends State<Homepage> {
                                       textAlign: TextAlign.start,
                                       ),
                                     ),
-                                    SizedBox(height: 0,),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0,0,65,0),
-                                      child: Text("4.32", style: TextStyle(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w600,
-                                      ),),
+                                      padding: EdgeInsetsDirectional.fromSTEB(0,0,30,0),
+                                      child: Row(
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsetsDirectional.fromSTEB(6, 0, 0, 0),
+                                            child: Text("GHS ", style: TextStyle(
+                                              fontFamily: 'Outfit',
+                                              color: Color(0xFF14181B),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                            ),),
+                                          ),
+                                          Text("4.32", style: TextStyle(
+                                            fontFamily: 'Outfit',
+                                            color: Color(0xFF14181B),
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w600,
+                                          ),),
+                                        ],
+                                      ),
                                     ),
                                 ],
                               ),
@@ -262,7 +274,7 @@ class _HomePageState extends State<Homepage> {
                                   Align(
                                     alignment: Alignment.topLeft,
                                     child: Icon(Icons.payment_sharp, color: Colors.red, size: 22,)),
-                                    SizedBox(height: 18,),
+                                    SizedBox(height: 20,),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(0,0,58,0),
                                       child: Text("Pay Bill", style: TextStyle(
@@ -281,7 +293,7 @@ class _HomePageState extends State<Homepage> {
                                         fontFamily: 'Outfit',
                                         color: Color(0xFF14181B),
                                         fontSize: 10,
-                                        fontWeight: FontWeight.w600,
+                                        fontWeight: FontWeight.w300,
                                       ),),
                                     ),
                                 ],
@@ -312,400 +324,406 @@ class _HomePageState extends State<Homepage> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 44),
                 child: // Generated code for this ListView Widget...
-ListView(
-  padding: EdgeInsets.zero,
-  primary: false,
-  shrinkWrap: true,
-  scrollDirection: Axis.vertical,
-  children: [
-    Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
-      child: InkWell(
-        splashColor: Colors.transparent,
-        focusColor: Colors.transparent,
-        hoverColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        onTap: () async {},
-        child: Container(
-          width: MediaQuery.sizeOf(context).width,
-          height: 80,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow: const [
-              BoxShadow(
-                blurRadius: 0,
-                color: Color(0x411D2429),
-                offset: Offset(0, 0),
-              )
-            ],
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 239, 239, 239),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: const Icon(Icons.add_circle, color: Color.fromARGB(255, 119, 119, 119), size: 40,))
-                  ),
-                ),
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8, 0, 4, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Top Up airtime or data',
-                          style: TextStyle(
-                                fontFamily: 'Outfit',
-                                color: Color(0xFF14181B),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                              ),
+              ListView(
+                padding: EdgeInsets.zero,
+                primary: false,
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                    child: InkWell(
+                      onTap: () async {},
+                      child: Container(
+                        width: MediaQuery.sizeOf(context).width,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 0,
+                              color: Color(0x411D2429),
+                              offset: Offset(0, 0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
-                          child: Text(
-                            'Recharge airtime or data to this phone',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Color(0xFF14181B),
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.normal,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                    child: Container(
+                                      height: 50,
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        color: const Color.fromARGB(255, 255, 255, 255),
+                                        border: Border.all(
+                                          color: const Color.fromARGB(255, 231, 231, 231),
+                                          width: 1,
+                                        ),
+                                        borderRadius: BorderRadius.circular(50),
+                                      ),
+                                      child: const Icon(Icons.add_circle, color: Color.fromARGB(255, 119, 119, 119), size: 30,)),
+                                  )
                                 ),
+                              ),
+                              const Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(20, 0, 4, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Top Up airtime or data',
+                                        style: TextStyle(
+                                              fontFamily: 'Outfit',
+                                              color: Color(0xFF14181B),
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
+                                        child: Text(
+                                          'Recharge airtime or data to this phone',
+                                          textAlign: TextAlign.start,
+                                          style: TextStyle(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                color: Color(0xFF14181B),
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              const Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                                    child: Icon(
+                                      Icons.chevron_right_rounded,
+                                      color: Color(0xFF57636C),
+                                      size: 30,
+                                    ),
+                                  ),
+                                  
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                const Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                      child: Icon(
-                        Icons.chevron_right_rounded,
-                        color: Color(0xFF57636C),
-                        size: 30,
                       ),
                     ),
-                    
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    ),
-    Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16, 2, 16, 0),
-      child: InkWell(
-        onTap: () async {},
-        child: Container(
-          width: MediaQuery.sizeOf(context).width,
-          height: 80,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow: const [
-              BoxShadow(
-                blurRadius: 0,
-                color: Color(0x411D2429),
-                offset: Offset(0, 0),
-              )
-            ],
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 239, 239, 239),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: const Icon(Icons.phone_android, color: Color.fromARGB(255, 119, 119, 119), size: 40,))
                   ),
-                ),
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8, 0, 4, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'My Subscriptions',
-                          style: TextStyle(
-                                fontFamily: 'Outfit',
-                                color: Color(0xFF14181B),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                              ),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(16, 2, 16, 0),
+                    child: InkWell(
+                      onTap: () async {},
+                      child: Container(
+                        width: MediaQuery.sizeOf(context).width,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 0,
+                              color: Color(0x411D2429),
+                              offset: Offset(0, 0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
-                          child: Text(
-                            'Manage all your subscriptions',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Color(0xFF14181B),
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.normal,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Container(
+                                    width: 50,
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        color: const Color.fromARGB(255, 231, 231, 231),
+                                        width: 1,
+                                      ),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
+                                    child: const Icon(Icons.phone_android, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
                                 ),
+                              ),
+                              const Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(20, 0, 4, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'My Subscriptions',
+                                        style: TextStyle(
+                                              fontFamily: 'Outfit',
+                                              color: Color(0xFF14181B),
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
+                                        child: Text(
+                                          'Manage all your subscriptions',
+                                          textAlign: TextAlign.start,
+                                          style: TextStyle(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                color: Color(0xFF14181B),
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              const Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                                    child: Icon(
+                                      Icons.chevron_right_rounded,
+                                      color: Color(0xFF57636C),
+                                      size: 30,
+                                    ),
+                                  ),
+                                  
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                const Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                      child: Icon(
-                        Icons.chevron_right_rounded,
-                        color: Color(0xFF57636C),
-                        size: 30,
                       ),
                     ),
-                    
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    ),
-    Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16, 2, 16, 0),
-      child: InkWell(
-        splashColor: Colors.transparent,
-        focusColor: Colors.transparent,
-        hoverColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        onTap: () async {},
-        child: Container(
-          width: MediaQuery.sizeOf(context).width,
-          height: 80,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow: const [
-              BoxShadow(
-                blurRadius: 0,
-                color: Color(0x411D2429),
-                offset: Offset(0, 0),
-              )
-            ],
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 239, 239, 239),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: const Icon(Icons.stacked_bar_chart_outlined, color: Color.fromARGB(255, 119, 119, 119), size: 40,))
                   ),
-                ),
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8, 0, 4, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Value-Added Services',
-                          style: TextStyle(
-                                fontFamily: 'Outfit',
-                                color: Color(0xFF14181B),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                              ),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(16, 2, 16, 0),
+                    child: InkWell(
+                      onTap: () async {},
+                      child: Container(
+                        width: MediaQuery.sizeOf(context).width,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 0,
+                              color: Color(0x411D2429),
+                              offset: Offset(0, 0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
-                          child: Text(
-                            'Recharge airtime or data to this phone',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Color(0xFF14181B),
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.normal,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1,
+                                        color: const Color.fromARGB(255, 231, 231, 231),
+                                      ),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
+                                    child: const Icon(Icons.stacked_bar_chart_outlined, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
                                 ),
+                              ),
+                              const Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(20, 0, 4, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Value-Added Services',
+                                        style: TextStyle(
+                                              fontFamily: 'Outfit',
+                                              color: Color(0xFF14181B),
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
+                                        child: Text(
+                                          'Recharge airtime or data to this phone',
+                                          textAlign: TextAlign.start,
+                                          style: TextStyle(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                color: Color(0xFF14181B),
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              const Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                                    child: Icon(
+                                      Icons.chevron_right_rounded,
+                                      color: Color(0xFF57636C),
+                                      size: 30,
+                                    ),
+                                  ),
+                                  
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                const Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                      child: Icon(
-                        Icons.chevron_right_rounded,
-                        color: Color(0xFF57636C),
-                        size: 30,
                       ),
                     ),
-                    
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    ),
-    Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16, 2, 16, 0),
-      child: InkWell(
-        onTap: () async {},
-        child: Container(
-          width: MediaQuery.sizeOf(context).width,
-          height: 80,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow: const [
-              BoxShadow(
-                blurRadius: 0,
-                color: Color(0x411D2429),
-                offset: Offset(0, 0),
-              )
-            ],
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 239, 239, 239),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: const Icon(Icons.stacked_bar_chart_outlined, color: Color.fromARGB(255, 119, 119, 119), size: 40,))
                   ),
-                ),
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8, 0, 4, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Value-Added Services',
-                          style: TextStyle(
-                                fontFamily: 'Outfit',
-                                color: Color(0xFF14181B),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                              ),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(16, 2, 16, 0),
+                    child: InkWell(
+                      onTap: () async {},
+                      child: Container(
+                        width: MediaQuery.sizeOf(context).width,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 0,
+                              color: Color(0x411D2429),
+                              offset: Offset(0, 0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
-                          child: Text(
-                            'Recharge airtime or data to this phone',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Color(0xFF14181B),
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.normal,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Container(
+                                    width: 50,
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1,
+                                        color: const Color.fromARGB(255, 231, 231, 231),
+                                      ),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
+                                    child: const Icon(Icons.stacked_bar_chart_outlined, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
                                 ),
+                              ),
+                              const Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(8, 0, 4, 0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Value-Added Services',
+                                        style: TextStyle(
+                                              fontFamily: 'Outfit',
+                                              color: Color(0xFF14181B),
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(0, 4, 8, 0),
+                                        child: Text(
+                                          'Recharge airtime or data to this phone',
+                                          textAlign: TextAlign.start,
+                                          style: TextStyle(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                color: Color(0xFF14181B),
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              const Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                                    child: Icon(
+                                      Icons.chevron_right_rounded,
+                                      color: Color(0xFF57636C),
+                                      size: 30,
+                                    ),
+                                  ),
+                                  
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                const Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                      child: Icon(
-                        Icons.chevron_right_rounded,
-                        color: Color(0xFF57636C),
-                        size: 30,
                       ),
                     ),
-                    
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    ),
-    
-  ],
-)
-
+                  ),
+                  
+                ],
+              )
               ),
             ],
           ),
-          
         ),
         bottomNavigationBar:BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
@@ -727,10 +745,10 @@ ListView(
             onTap: () {
                Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomeCoffeeWidget()),
+              MaterialPageRoute(builder: (context) => const HomeCoffeeWidget()),
             );
             },
-            child: Image.asset("assets/vodafone.jpg")),
+            child: Image.asset("assets/TObi-2.png", height: 60,)),
               label: '', // You can keep a label for accessibility
             ),
           const BottomNavigationBarItem(
