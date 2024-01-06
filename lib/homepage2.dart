@@ -481,7 +481,7 @@ class _HomeCoffeeWidgetState extends State<HomeCoffeeWidget> {
             label: 'Search',
           ),
            BottomNavigationBarItem(
-           icon: Image.asset("assets/vodafone.jpg"),
+           icon: Image.asset("assets/TObi-2.png", height: 50,),
               label: '', // You can keep a label for accessibility
             ),
           const BottomNavigationBarItem(

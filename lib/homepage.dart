@@ -659,23 +659,23 @@ class _HomePageState extends State<Homepage> {
                                       ),
                                       borderRadius: BorderRadius.circular(50),
                                     ),
-                                    child: const Icon(Icons.stacked_bar_chart_outlined, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
+                                    child: const Icon(Icons.card_giftcard, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
                                 ),
                               ),
                               const Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(8, 0, 4, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(20, 0, 4, 0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Value-Added Services',
+                                        'Red Loyalty Rewards',
                                         style: TextStyle(
                                               fontFamily: 'Outfit',
                                               color: Color(0xFF14181B),
-                                              fontSize: 15,
+                                              fontSize: 14,
                                               fontWeight: FontWeight.w600,
                                             ),
                                       ),
