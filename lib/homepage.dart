@@ -35,7 +35,7 @@ class _HomePageState extends State<Homepage> {
           
           backgroundColor: const Color(0xFFF1F4F8),
           automaticallyImplyLeading: false,
-          leading: Image.asset("assets/vodafone-removebg-preview.png"),
+          leading: Image.asset("assets/vodafone-removebg-preview.png",),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8),
@@ -370,7 +370,7 @@ class _HomePageState extends State<Homepage> {
                                         ),
                                         borderRadius: BorderRadius.circular(50),
                                       ),
-                                      child: const Icon(Icons.add_circle, color: Color.fromARGB(255, 119, 119, 119), size: 30,)),
+                                      child: const Icon(Icons.add_circle, color: Color.fromARGB(255, 119, 119, 119), size: 20,)),
                                   )
                                 ),
                               ),
@@ -467,7 +467,7 @@ class _HomePageState extends State<Homepage> {
                                       ),
                                       borderRadius: BorderRadius.circular(50),
                                     ),
-                                    child: const Icon(Icons.phone_android, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
+                                    child: const Icon(Icons.phone_android, color: Color.fromARGB(255, 119, 119, 119), size: 20,))
                                 ),
                               ),
                               const Expanded(
@@ -563,7 +563,7 @@ class _HomePageState extends State<Homepage> {
                                       ),
                                       borderRadius: BorderRadius.circular(50),
                                     ),
-                                    child: const Icon(Icons.stacked_bar_chart_outlined, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
+                                    child: const Icon(Icons.stacked_bar_chart_outlined, color: Color.fromARGB(255, 119, 119, 119), size: 20,))
                                 ),
                               ),
                               const Expanded(
@@ -659,7 +659,7 @@ class _HomePageState extends State<Homepage> {
                                       ),
                                       borderRadius: BorderRadius.circular(50),
                                     ),
-                                    child: const Icon(Icons.card_giftcard, color: Color.fromARGB(255, 119, 119, 119), size: 30,))
+                                    child: const Icon(Icons.card_giftcard, color: Color.fromARGB(255, 119, 119, 119), size: 20,))
                                 ),
                               ),
                               const Expanded(
