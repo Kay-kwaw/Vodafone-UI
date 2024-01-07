@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:vodafone/homepage.dart';
-import 'package:vodafone/homepage2.dart';
-
-void main() {
-  runApp(const MyApp());
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Homepage(),
+    return MaterialApp(
+      theme: ThemeData.light(), // Light theme as a fallback
+      darkTheme: ThemeData.dark().copyWith(
+        // Customize your dark theme colors here
+        primaryColor: Colors.red,
+        hintColor: Colors.white,
+        // ... other theme properties
+      ),
+      themeMode: ThemeMode.system, // or ThemeMode.light or ThemeMode.dark
+      home: const Homepage(),
     );
   }
 }
-
