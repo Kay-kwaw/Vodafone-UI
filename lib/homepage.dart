@@ -1,10 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:provider/provider.dart';
-import 'package:vodafone/commons/ThemeManager.dart';
 import 'package:vodafone/commons/navbar.dart';
-import 'package:vodafone/second_screen.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -20,37 +17,25 @@ class _HomePageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
-    return Consumer(
-      builder: (context, value, child) {
+    final colorScheme = Theme.of(context).colorScheme;
      return GestureDetector(
           child: Scaffold(
             key: scaffoldKey,
-            backgroundColor: const Color(0xFFF1F4F8),
+            backgroundColor: colorScheme.secondary,
             appBar: AppBar(
               title: const Text("Good morning, Kwaw Kumi", 
               style: TextStyle(
                 fontFamily: 'Plus Jakarta Sans',
-                color: Color(0xFF14181B),
                 fontSize: 15,
                 fontWeight: FontWeight.normal,
               )
               ),
-              automaticallyImplyLeading: false,
               leading: Image.asset("assets/vodafone-removebg-preview.png",),
               actions: [
                 Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                    ),
+                  padding: const EdgeInsets.all(10),
                     child: IconButton(onPressed: (){}, icon: const Icon(Icons.notification_important, color: Color.fromARGB(255, 255, 47, 32), size: 24,)),
                   ),
-                ),
               ],
               centerTitle: true,
               elevation: 2,
@@ -65,7 +50,7 @@ class _HomePageState extends State<Homepage> {
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colorScheme.primary,
                         boxShadow: const [
                           BoxShadow(
                             blurRadius: 0,
@@ -86,7 +71,7 @@ class _HomePageState extends State<Homepage> {
                               child: Icon(Icons.cell_tower,
                                   color: Color.fromARGB(255, 255, 0, 0), size: 24),
                             ),
-                                const SizedBox(height: 10,),
+                            const SizedBox(height: 10,),
                             LinearPercentIndicator(
                                 width: 330,
                                 lineHeight: 8.0,
@@ -111,7 +96,6 @@ class _HomePageState extends State<Homepage> {
                                           'Your data',
                                           style:TextStyle(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF14181B),
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.normal,
                                               ),
@@ -125,7 +109,6 @@ class _HomePageState extends State<Homepage> {
                                               '20.34',
                                               style: TextStyle(
                                                     fontFamily: 'Outfit',
-                                                    color: Color(0xFF14181B),
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -159,7 +142,6 @@ class _HomePageState extends State<Homepage> {
                                               '300',
                                               style: TextStyle(
                                                     fontFamily: 'Outfit',
-                                                    color: Color(0xFF14181B),
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w300,
                                                   ),
@@ -186,7 +168,6 @@ class _HomePageState extends State<Homepage> {
                     padding: EdgeInsets.zero,
                     primary: false,
                     shrinkWrap: true,
-                    scrollDirection: Axis.vertical,
                     children: [
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
@@ -198,7 +179,7 @@ class _HomePageState extends State<Homepage> {
                                 width: 170,
                                 height: 140,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: colorScheme.primary,
                                   boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 0,
@@ -220,7 +201,6 @@ class _HomePageState extends State<Homepage> {
                                           padding: EdgeInsetsDirectional.fromSTEB(0,0,20,0),
                                           child: Text("Your airtime balance", style: TextStyle(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
                                             fontSize: 10,
                                             fontWeight: FontWeight.w300,
                                           ),
@@ -235,14 +215,12 @@ class _HomePageState extends State<Homepage> {
                                                 padding: EdgeInsetsDirectional.fromSTEB(6, 0, 0, 0),
                                                 child: Text("GHS ", style: TextStyle(
                                                   fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
                                                   fontSize: 12,
                                                   fontWeight: FontWeight.w600,
                                                 ),),
                                               ),
                                               Text("4.32", style: TextStyle(
                                                 fontFamily: 'Outfit',
-                                                color: Color(0xFF14181B),
                                                 fontSize: 20,
                                                 fontWeight: FontWeight.w600,
                                               ),),
@@ -259,7 +237,7 @@ class _HomePageState extends State<Homepage> {
                                 width: 170,
                                 height: 140,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
+                                   color: colorScheme.primary,
                                   boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 0,
@@ -281,7 +259,6 @@ class _HomePageState extends State<Homepage> {
                                           padding: EdgeInsetsDirectional.fromSTEB(0,0,58,0),
                                           child: Text("Pay Bill", style: TextStyle(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
                                             fontSize: 20,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -293,7 +270,6 @@ class _HomePageState extends State<Homepage> {
                                           padding: EdgeInsetsDirectional.fromSTEB(0,0,0,0),
                                           child: Text("Make payments for your postpaid services", style: TextStyle(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
                                             fontSize: 10,
                                             fontWeight: FontWeight.w300,
                                           ),),
@@ -316,7 +292,6 @@ class _HomePageState extends State<Homepage> {
                       'Manage',
                       style: TextStyle(
                             fontFamily: 'Plus Jakarta Sans',
-                            color: Color.fromARGB(255, 0, 0, 0),
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             
@@ -340,7 +315,7 @@ class _HomePageState extends State<Homepage> {
                             width: MediaQuery.sizeOf(context).width,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                               color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
@@ -365,7 +340,6 @@ class _HomePageState extends State<Homepage> {
                                           height: 50,
                                           width: 50,
                                           decoration: BoxDecoration(
-                                            color: const Color.fromARGB(255, 255, 255, 255),
                                             border: Border.all(
                                               color: const Color.fromARGB(255, 231, 231, 231),
                                               width: 1,
@@ -388,7 +362,6 @@ class _HomePageState extends State<Homepage> {
                                             'Top Up airtime or data',
                                             style: TextStyle(
                                                   fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -400,7 +373,6 @@ class _HomePageState extends State<Homepage> {
                                               textAlign: TextAlign.start,
                                               style: TextStyle(
                                                     fontFamily: 'Plus Jakarta Sans',
-                                                    color: Color(0xFF14181B),
                                                     fontSize: 11,
                                                     fontWeight: FontWeight.normal,
                                                   ),
@@ -440,7 +412,7 @@ class _HomePageState extends State<Homepage> {
                             width: MediaQuery.sizeOf(context).width,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                               color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
@@ -463,6 +435,7 @@ class _HomePageState extends State<Homepage> {
                                         width: 50,
                                         height: 50,
                                         decoration: BoxDecoration(
+                                           color: colorScheme.primary,
                                           border: Border.all(
                                             color: const Color.fromARGB(255, 231, 231, 231),
                                             width: 1,
@@ -484,7 +457,6 @@ class _HomePageState extends State<Homepage> {
                                             'My Subscriptions',
                                             style: TextStyle(
                                                   fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -496,7 +468,6 @@ class _HomePageState extends State<Homepage> {
                                               textAlign: TextAlign.start,
                                               style: TextStyle(
                                                     fontFamily: 'Plus Jakarta Sans',
-                                                    color: Color(0xFF14181B),
                                                     fontSize: 11,
                                                     fontWeight: FontWeight.normal,
                                                   ),
@@ -536,7 +507,7 @@ class _HomePageState extends State<Homepage> {
                             width: MediaQuery.sizeOf(context).width,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                               color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
@@ -580,7 +551,6 @@ class _HomePageState extends State<Homepage> {
                                             'Value-Added Services',
                                             style: TextStyle(
                                                   fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -592,7 +562,6 @@ class _HomePageState extends State<Homepage> {
                                               textAlign: TextAlign.start,
                                               style: TextStyle(
                                                     fontFamily: 'Plus Jakarta Sans',
-                                                    color: Color(0xFF14181B),
                                                     fontSize: 11,
                                                     fontWeight: FontWeight.normal,
                                                   ),
@@ -632,7 +601,7 @@ class _HomePageState extends State<Homepage> {
                             width: MediaQuery.sizeOf(context).width,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
@@ -676,7 +645,6 @@ class _HomePageState extends State<Homepage> {
                                             'Red Loyalty Rewards',
                                             style: TextStyle(
                                                   fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -688,7 +656,6 @@ class _HomePageState extends State<Homepage> {
                                               textAlign: TextAlign.start,
                                               style: TextStyle(
                                                     fontFamily: 'Plus Jakarta Sans',
-                                                    color: Color(0xFF14181B),
                                                     fontSize: 11,
                                                     fontWeight: FontWeight.normal,
                                                   ),
@@ -727,10 +694,9 @@ class _HomePageState extends State<Homepage> {
                 ],
               ),
             ),
-            bottomNavigationBar: MybottomNavbar(),
+            bottomNavigationBar: const MybottomNavbar(),
             ),
           );
-  });
   
   }
 }

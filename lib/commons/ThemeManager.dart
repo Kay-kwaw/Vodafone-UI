@@ -15,14 +15,26 @@ class ThemeProvider extends ChangeNotifier {
   }
 
   final ThemeData _lightTheme = ThemeData(
-    primarySwatch: Colors.blue,
     visualDensity: VisualDensity.adaptivePlatformDensity,
+    colorScheme: const ColorScheme.light(
+      primary: Colors.white,
+      secondary:Color(0xFFF1F4F8),
+      
+      // secondary: Colors.green,
+    
+    ),
   );
 
   final ThemeData _darkTheme = ThemeData(
-    primarySwatch: Colors.teal,
     visualDensity: VisualDensity.adaptivePlatformDensity,
+    colorScheme: const ColorScheme.dark(
+      primary: Colors.black,
+      secondary: Color.fromARGB(255, 8, 8, 15)
+      
+      
+      
+      // secondary: Colors.blue,
+    ),
     brightness: Brightness.dark,
-    backgroundColor: Colors.black
   );
 }
