@@ -19,29 +19,24 @@ class _SecondScreenState extends State<SecondScreen> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+     final colorScheme = Theme.of(context).colorScheme;
     return GestureDetector(
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFFF1F4F8),
+        // backgroundColor: const Color(0xFFF1F4F8),
         appBar: AppBar(
-          title: const Text("Good morning. Might", 
+          title: const Text("Good morning. Kwaw Kumi", 
           style: TextStyle(
             fontFamily: 'Plus Jakarta Sans',
-            color: Color(0xFF14181B),
             fontSize: 15,
             fontWeight: FontWeight.normal,
           )
           ),
-          
-          backgroundColor: const Color(0xFFF1F4F8),
-          automaticallyImplyLeading: false,
           leading: Image.asset("assets/vodafone-removebg-preview.png"),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8),
               child: Container(
-                width: 60,
-                height: 60,
                 clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
@@ -58,18 +53,7 @@ class _SecondScreenState extends State<SecondScreen> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
-                child: Text(
-                  '',
-                  style: TextStyle(
-                        fontFamily: 'Plus Jakarta Sans',
-                        color: Color(0xFF57636C),
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal,
-                      ),
-                ),
-              ),
+              const SizedBox(height: 20,),
               ListView(
                 padding: EdgeInsets.zero,
                 primary: false,
@@ -77,9 +61,8 @@ class _SecondScreenState extends State<SecondScreen> {
                 scrollDirection: Axis.vertical,
                 children: [
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
                     child: InkWell(
-                      onTap: () async {},
                       child: Row(
                         children: [
                           Column(
@@ -88,12 +71,11 @@ class _SecondScreenState extends State<SecondScreen> {
                                 width: 170,
                                 height: 140,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: colorScheme.primary,
                                   boxShadow: const [
                                     BoxShadow(
-                                      blurRadius: 0,
-                                      color: Color(0x411D2429),
-                                      offset: Offset(0, 0),
+                                      // blurRadius: 0,
+                                      // offset: Offset(0, 0),
                                     )
                                   ],
                                   borderRadius: BorderRadius.circular(12),
@@ -107,10 +89,9 @@ class _SecondScreenState extends State<SecondScreen> {
                                         child: Icon(Icons.cell_tower, color: Colors.red, size: 22,)),
                                         SizedBox(height: 23,),
                                         Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,80,0),
+                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,84,0),
                                           child: Text("Your data", style: TextStyle(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
                                             fontSize: 10,
                                             fontWeight: FontWeight.w300,
                                           ),
@@ -124,11 +105,17 @@ class _SecondScreenState extends State<SecondScreen> {
                                             children: [
                                               Text("20.34", style: TextStyle(
                                                 fontFamily: 'Outfit',
-                                                color: Color(0xFF14181B),
-                                                fontSize: 22,
+                                                fontSize: 20,
                                                 fontWeight: FontWeight.w700,
                                               ),),
-                                              Text("GB")
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(3,4,0,0),
+                                                child: Text("GB", style: TextStyle(
+                                                  fontFamily: 'Outfit',
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w700,
+                                                ),),
+                                              ),
                                             ],
                                           ),
                                         ),
@@ -136,12 +123,13 @@ class _SecondScreenState extends State<SecondScreen> {
                                   ),
                                 ),
                               ),
+                              
                               const SizedBox(height: 10,),
-                              Container(
+                               Container(
                                 width: 170,
                                 height: 140,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: colorScheme.primary,
                                   boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 0,
@@ -158,27 +146,36 @@ class _SecondScreenState extends State<SecondScreen> {
                                       Align(
                                         alignment: Alignment.topLeft,
                                         child: Icon(Icons.sim_card, color: Colors.red, size: 22,)),
-                                        SizedBox(height: 23,),
+                                        SizedBox(height: 30,),
                                         Padding(
                                           padding: EdgeInsetsDirectional.fromSTEB(0,0,20,0),
                                           child: Text("Your airtime balance", style: TextStyle(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
                                             fontSize: 10,
                                             fontWeight: FontWeight.w300,
                                           ),
                                           textAlign: TextAlign.start,
                                           ),
                                         ),
-                                        SizedBox(height: 0,),
                                         Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,65,0),
-                                          child: Text("4.32", style: TextStyle(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.w600,
-                                          ),),
+                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,30,0),
+                                          child: Row(
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional.fromSTEB(6, 0, 0, 0),
+                                                child: Text("GHS ", style: TextStyle(
+                                                  fontFamily: 'Outfit',
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w600,
+                                                ),),
+                                              ),
+                                              Text("4.32", style: TextStyle(
+                                                fontFamily: 'Outfit',
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600,
+                                              ),),
+                                            ],
+                                          ),
                                         ),
                                     ],
                                   ),
@@ -188,54 +185,52 @@ class _SecondScreenState extends State<SecondScreen> {
                           ),
                           const SizedBox(
                             width: 16,),
-                          Container(
-                            width: 170,
-                            height: 140,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: const [
-                                BoxShadow(
-                                  blurRadius: 0,
-                                  color: Color(0x411D2429),
-                                  offset: Offset(0, 0),
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: Column(
-                                children: [
-                                  Align(
-                                    alignment: Alignment.topLeft,
-                                    child: Icon(Icons.payment_sharp, color: Colors.red, size: 22,)),
-                                    SizedBox(height: 18,),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0,0,58,0),
-                                      child: Text("Pay Bill", style: TextStyle(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                      textAlign: TextAlign.start,
-                                      ),
-                                    ),
-                                    SizedBox(height: 0,),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(0,0,0,0),
-                                      child: Text("Make payments for your postpaid services", style: TextStyle(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w600,
-                                      ),),
-                                    ),
-                                ],
+                         Container(
+                                width: 170,
+                                height: 140,
+                                decoration: BoxDecoration(
+                                   color: colorScheme.primary,
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      blurRadius: 0,
+                                      color: Color(0x411D2429),
+                                      offset: Offset(0, 0),
+                                    )
+                                  ],
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(20.0),
+                                  child: Column(
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.topLeft,
+                                        child: Icon(Icons.payment_sharp, color: Colors.red, size: 22,)),
+                                        SizedBox(height: 20,),
+                                        Padding(
+                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,58,0),
+                                          child: Text("Pay Bill", style: TextStyle(
+                                            fontFamily: 'Outfit',
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          textAlign: TextAlign.start,
+                                          ),
+                                        ),
+                                        SizedBox(height: 0,),
+                                        Padding(
+                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,0,0),
+                                          child: Text("Make payments for your postpaid services", style: TextStyle(
+                                            fontFamily: 'Outfit',
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w300,
+                                          ),),
+                                        ),
+                                    ],
+                                  ),
+                                ),
+                                
                               ),
-                            ),
-                            
-                          ),
                         ],
                       ),
                     ),

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Voda clone',
       theme: Provider.of<ThemeProvider>(context).getTheme(),
-      home: SecondScreen(),
+      home: Homepage(),
     );
   }
 }
