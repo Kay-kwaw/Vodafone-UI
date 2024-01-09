@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:vodafone/commons/ThemeManager.dart';
 import 'package:vodafone/homepage.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: MyApp(),
+    ),
+  );
+}
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-     theme: ThemeData.light(),
-     themeMode: ThemeMode.light,
-     darkTheme: ThemeData.dark(),
-      home: const Homepage(),
+    return MaterialApp(
+      title: 'Dark/Light Theme Demo',
+      theme: Provider.of<ThemeProvider>(context).getTheme(),
+      home: Homepage(),
     );
   }
 }

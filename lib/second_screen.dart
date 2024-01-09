@@ -4,20 +4,19 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:vodafone/commons/navbar.dart';
 
-class HomeCoffeeWidget extends StatefulWidget {
-  const HomeCoffeeWidget({Key? key}) : super(key: key);
+class SecondScreen extends StatefulWidget {
+  const SecondScreen({Key? key}) : super(key: key);
 
   @override
-  _HomeCoffeeWidgetState createState() => _HomeCoffeeWidgetState();
+  // ignore: library_private_types_in_public_api
+  _SecondScreenState createState() => _SecondScreenState();
 }
 
-class _HomeCoffeeWidgetState extends State<HomeCoffeeWidget> {
+class _SecondScreenState extends State<SecondScreen> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -465,40 +464,7 @@ class _HomeCoffeeWidgetState extends State<HomeCoffeeWidget> {
           ),
           
         ),
-        bottomNavigationBar:BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          onTap: (index) {
-            setState(() {
-            });
-          },
-          items:  [
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.computer_outlined,),
-            label: 'Services',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.money,),
-            label: 'Search',
-          ),
-           BottomNavigationBarItem(
-           icon: Image.asset("assets/TObi-2.png", height: 50,),
-              label: '', // You can keep a label for accessibility
-            ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.add_circle,),
-            label: 'Bundles',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.settings,),
-            label: 'Settings',
-          ),
-  ],
-          selectedItemColor: Colors.red, // You can customize the selected item color
-          unselectedItemColor: Colors.grey, // You can customize the unselected item color
-          showUnselectedLabels: true, // Set this to false if you don't want to show unselected labels
-          selectedFontSize: 8, // Set the font size for the selected label
-          unselectedFontSize: 10, // Set the font size for unselected labels
-        ),
+       bottomNavigationBar: const MybottomNavbar(),
       ),
     );
   }
