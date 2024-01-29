@@ -2,12 +2,10 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:vodafone/commons/navbar.dart';
 
 class SecondScreen extends StatefulWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+  const SecondScreen({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -89,7 +87,7 @@ class _SecondScreenState extends State<SecondScreen> {
                                         child: Icon(Icons.cell_tower, color: Colors.red, size: 22,)),
                                         SizedBox(height: 23,),
                                         Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,84,0),
+                                          padding: EdgeInsetsDirectional.fromSTEB(0,0,80,0),
                                           child: Text("Your data", style: TextStyle(
                                             fontFamily: 'Outfit',
                                             fontSize: 10,
