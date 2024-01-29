@@ -270,7 +270,7 @@ class _SecondScreenState extends State<SecondScreen> {
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
-                                  // color: Color(0x411D2429),
+                                  color: Color(0x411D2429),
                                   offset: Offset(0, 0),
                                 )
                               ],
@@ -288,7 +288,6 @@ class _SecondScreenState extends State<SecondScreen> {
                                       padding: EdgeInsetsDirectional.fromSTEB(0,0,20,0),
                                       child: Text("Top Up Airtime Or Data", style: TextStyle(
                                         fontFamily: 'Outfit',
-                                        // color: Color(0xFF14181B),
                                         fontSize: 10,
                                         fontWeight: FontWeight.w800,
                                       ),
@@ -306,7 +305,7 @@ class _SecondScreenState extends State<SecondScreen> {
                             width: 170,
                             height: 130,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
@@ -328,7 +327,6 @@ class _SecondScreenState extends State<SecondScreen> {
                                       padding: EdgeInsetsDirectional.fromSTEB(0,10,40,10),
                                       child: Text("My Subscription", style: TextStyle(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
                                         fontSize: 10,
                                         fontWeight: FontWeight.w800,
                                       ),
@@ -367,7 +365,7 @@ class _SecondScreenState extends State<SecondScreen> {
                             width: 170,
                             height: 130,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
@@ -389,7 +387,6 @@ class _SecondScreenState extends State<SecondScreen> {
                                       padding: EdgeInsetsDirectional.fromSTEB(0,10,40,10),
                                       child: Text("Value-Added Services", style: TextStyle(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
                                         fontSize: 10,
                                         fontWeight: FontWeight.w800,
                                       ),
@@ -408,7 +405,7 @@ class _SecondScreenState extends State<SecondScreen> {
                             width: 170,
                             height: 130,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
@@ -430,7 +427,6 @@ class _SecondScreenState extends State<SecondScreen> {
                                       padding: EdgeInsetsDirectional.fromSTEB(0,10,40,10),
                                       child: Text("Red Loyalty Rewards", style: TextStyle(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
                                         fontSize: 10,
                                         fontWeight: FontWeight.w800,
                                       ),
