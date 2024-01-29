@@ -21,7 +21,7 @@ class _SecondScreenState extends State<SecondScreen> {
     return GestureDetector(
       child: Scaffold(
         key: scaffoldKey,
-        // backgroundColor: const Color(0xFFF1F4F8),
+        backgroundColor: colorScheme.secondary,
         appBar: AppBar(
           title: const Text("Good morning. Kwaw Kumi", 
           style: TextStyle(
@@ -242,7 +242,6 @@ class _SecondScreenState extends State<SecondScreen> {
                   'Manage',
                   style: TextStyle(
                         fontFamily: 'Plus Jakarta Sans',
-                        color: Color.fromARGB(255, 0, 0, 0),
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         
@@ -267,11 +266,11 @@ class _SecondScreenState extends State<SecondScreen> {
                             width: 170,
                             height: 130,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: colorScheme.primary,
                               boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0,
-                                  color: Color(0x411D2429),
+                                  // color: Color(0x411D2429),
                                   offset: Offset(0, 0),
                                 )
                               ],
@@ -289,7 +288,7 @@ class _SecondScreenState extends State<SecondScreen> {
                                       padding: EdgeInsetsDirectional.fromSTEB(0,0,20,0),
                                       child: Text("Top Up Airtime Or Data", style: TextStyle(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
+                                        // color: Color(0xFF14181B),
                                         fontSize: 10,
                                         fontWeight: FontWeight.w800,
                                       ),

@@ -294,7 +294,6 @@ class _HomePageState extends State<Homepage> {
                             fontFamily: 'Plus Jakarta Sans',
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            
                           ),
                     ),
                   ),
