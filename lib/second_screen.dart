@@ -1,5 +1,4 @@
 
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:vodafone/commons/navbar.dart';
@@ -59,7 +58,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 scrollDirection: Axis.vertical,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
                     child: InkWell(
                       child: Row(
                         children: [

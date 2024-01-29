@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vodafone/commons/ThemeManager.dart';
 import 'package:vodafone/homepage.dart';
-import 'package:vodafone/second_screen.dart';
 
 void main() {
   runApp(
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Voda clone',
       theme: Provider.of<ThemeProvider>(context).getTheme(),
-      home: const SecondScreen(),
+      home: const Homepage(),
     );
   }
 }

@@ -6,6 +6,7 @@ import 'package:vodafone/second_screen.dart';
 class MybottomNavbar extends StatelessWidget {
   const MybottomNavbar({super.key});
 
+  @override
   Widget build(BuildContext context) {
     ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
     return BottomNavigationBar(
@@ -40,8 +41,16 @@ class MybottomNavbar extends StatelessWidget {
               child: Image.asset("assets/TObi-2.png", height: 60,))),
               label: '', // You can keep a label for accessibility
             ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.add_circle,),
+           BottomNavigationBarItem(
+            icon: InkWell(
+              onTap: () {
+                 themeProvider.toggleTheme();
+               Navigator.push(
+              context,
+               MaterialPageRoute(builder: (context) => const SecondScreen()),
+              );
+              },
+              child: Icon(Icons.add_circle,)),
             label: 'Bundles',
           ),
           const BottomNavigationBarItem(
